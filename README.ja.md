@@ -12,6 +12,7 @@
 - [Capella と StrictDoc の連携](#capella-と-strictdoc-の連携)
 - [EA: 全社ITシステム](#ea-全社itシステム)
 - [トレーサビリティ](#トレーサビリティ)
+- [商用ツールとGitHub上の連携リポジトリ](#商用ツールとgithub上の連携リポジトリ)
 - [AI × 要求](#ai--要求)
 - [関連リスト](#関連リスト)
 - [おすすめの組み合わせ](#おすすめの組み合わせ)
@@ -20,6 +21,7 @@
 
 - [doorstop-dev/doorstop](https://github.com/doorstop-dev/doorstop) ![stars](https://img.shields.io/github/stars/doorstop-dev/doorstop?style=flat-square) - バージョン管理を使った要求管理。文書間の親子リンクでツリーを作る。
 - [strictdoc-project/strictdoc](https://github.com/strictdoc-project/strictdoc) ![stars](https://img.shields.io/github/stars/strictdoc-project/strictdoc?style=flat-square) - 技術文書と要求管理。Web UIで階層を編集できる。
+- [florath/rmtoo](https://github.com/florath/rmtoo) ![stars](https://img.shields.io/github/stars/florath/rmtoo?style=flat-square) - 無料のOSS要求管理ツール（Python）。要求をプレーンテキストで管理し、依存関係・トレーサビリティのチェックとLaTeX/PDF/HTML出力ができる。
 - [useblocks/sphinx-needs](https://github.com/useblocks/sphinx-needs) ![stars](https://img.shields.io/github/stars/useblocks/sphinx-needs?style=flat-square) - Sphinx上で要求（needs）を管理。ISO 26262系のプロジェクトで使われる。
 - [bmw-software-engineering/trlc](https://github.com/bmw-software-engineering/trlc) ![stars](https://img.shields.io/github/stars/bmw-software-engineering/trlc?style=flat-square) - BMW製の "Treat Requirements Like Code"。構造変更を静的にチェックできる。
 
@@ -77,7 +79,17 @@ Capellaモデルの読み取り: py-capellambse（読み取り専用）
 ## トレーサビリティ
 
 - [itsallcode/openfasttrace](https://github.com/itsallcode/openfasttrace) ![stars](https://img.shields.io/github/stars/itsallcode/openfasttrace?style=flat-square) - 要求トレーシングスイート。
+- [goeb/reqflow](https://github.com/goeb/reqflow) ![stars](https://img.shields.io/github/stars/goeb/reqflow?style=flat-square) - 要求トレーサビリティツール（C++）。
 - [elisa-tech/BASIL](https://github.com/elisa-tech/BASIL) ![stars](https://img.shields.io/github/stars/elisa-tech/BASIL?style=flat-square) - 要求のトレーサビリティを持つソフトウェア品質管理ツール。
+
+## 商用ツールとGitHub上の連携リポジトリ
+
+以下のツールは商用（OSSではない）ため、本体はメインのエントリには載せていません。GitHubで見つかった連携用リポジトリだけを載せています。IBM DOORS Next、ReqView、Cradle は、確認できる公式リポジトリがありませんでした。
+
+- [valispace/ValispacePythonAPI](https://github.com/valispace/ValispacePythonAPI) ![stars](https://img.shields.io/github/stars/valispace/ValispacePythonAPI?style=flat-square) - Valispace（要求・システムズエンジニアリング）のPython API。
+- [valispace/ValispaceExcelPlugin](https://github.com/valispace/ValispaceExcelPlugin) ![stars](https://img.shields.io/github/stars/valispace/ValispaceExcelPlugin?style=flat-square) - ValispaceのExcelプラグイン。
+- [Kio-pon/innoslate-mcp](https://github.com/Kio-pon/innoslate-mcp) ![stars](https://img.shields.io/github/stars/Kio-pon/innoslate-mcp?style=flat-square) - ログイン済みのブラウザ経由で、AIアシスタントがInnoslateのプロジェクトを読み書きするMCPサーバー（非公式、初期段階）。
+- [FrancoisMalan/innoslate-xml-parser](https://github.com/FrancoisMalan/innoslate-xml-parser) ![stars](https://img.shields.io/github/stars/FrancoisMalan/innoslate-xml-parser?style=flat-square) - InnoslateのエクスポートXMLを解析してカスタムCSVにする（古い、2019年）。
 
 ## AI × 要求
 
@@ -104,6 +116,7 @@ Capellaモデルの読み取り: py-capellambse（読み取り専用）
 - [XORwell/jama-cli](https://github.com/XORwell/jama-cli) ![stars](https://img.shields.io/github/stars/XORwell/jama-cli?style=flat-square) - Jama要求管理のCLI。AIアシスタント向けにMCPサーバーにも対応。
 - [arthurfantaci/requirements-advisor](https://github.com/arthurfantaci/requirements-advisor) ![stars](https://img.shields.io/github/stars/arthurfantaci/requirements-advisor?style=flat-square) - 要求管理のベストプラクティスを助言するMCPサーバー。
 - [aminfara/matrix](https://github.com/aminfara/matrix) ![stars](https://img.shields.io/github/stars/aminfara/matrix?style=flat-square) - マルチエージェント・マルチセッション作業向けの、ローカルでプロジェクト単位の要求管理MCPサーバー。
+- [Kio-pon/innoslate-mcp](https://github.com/Kio-pon/innoslate-mcp) ![stars](https://img.shields.io/github/stars/Kio-pon/innoslate-mcp?style=flat-square) - Innoslate向けMCPサーバー（上の商用ツールのセクション参照）。
 
 ### LLMエージェントによるMBSE
 

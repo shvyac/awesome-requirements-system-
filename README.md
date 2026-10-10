@@ -12,6 +12,7 @@ Curated list of open-source tools for managing **hierarchical requirement trees*
 - [Capella x StrictDoc Connection](#capella-x-strictdoc-connection)
 - [EA: Whole Company IT](#ea-whole-company-it)
 - [Traceability](#traceability)
+- [Commercial Tools and Their GitHub Integrations](#commercial-tools-and-their-github-integrations)
 - [AI for Requirements](#ai-for-requirements)
 - [Related Lists](#related-lists)
 - [Suggested Combinations](#suggested-combinations)
@@ -20,6 +21,7 @@ Curated list of open-source tools for managing **hierarchical requirement trees*
 
 - [doorstop-dev/doorstop](https://github.com/doorstop-dev/doorstop) ![stars](https://img.shields.io/github/stars/doorstop-dev/doorstop?style=flat-square) - Requirements management using version control; parent/child links between documents form the tree.
 - [strictdoc-project/strictdoc](https://github.com/strictdoc-project/strictdoc) ![stars](https://img.shields.io/github/stars/strictdoc-project/strictdoc?style=flat-square) - Technical documentation and requirements management with a web UI for editing hierarchies.
+- [florath/rmtoo](https://github.com/florath/rmtoo) ![stars](https://img.shields.io/github/stars/florath/rmtoo?style=flat-square) - Free and open-source requirements management tool (Python); requirements in plain text files, dependency/traceability checks, LaTeX/PDF/HTML output.
 - [useblocks/sphinx-needs](https://github.com/useblocks/sphinx-needs) ![stars](https://img.shields.io/github/stars/useblocks/sphinx-needs?style=flat-square) - Needs/requirements in Sphinx; used in ISO 26262 style projects.
 - [bmw-software-engineering/trlc](https://github.com/bmw-software-engineering/trlc) ![stars](https://img.shields.io/github/stars/bmw-software-engineering/trlc?style=flat-square) - "Treat Requirements Like Code" from BMW; checks structure changes statically.
 
@@ -77,7 +79,17 @@ Capella model read access: py-capellambse (read-only)
 ## Traceability
 
 - [itsallcode/openfasttrace](https://github.com/itsallcode/openfasttrace) ![stars](https://img.shields.io/github/stars/itsallcode/openfasttrace?style=flat-square) - Requirement tracing suite.
+- [goeb/reqflow](https://github.com/goeb/reqflow) ![stars](https://img.shields.io/github/stars/goeb/reqflow?style=flat-square) - Requirement traceability tool (C++).
 - [elisa-tech/BASIL](https://github.com/elisa-tech/BASIL) ![stars](https://img.shields.io/github/stars/elisa-tech/BASIL?style=flat-square) - Software quality management with requirement traceability.
+
+## Commercial Tools and Their GitHub Integrations
+
+The tools below are commercial (not open source), so they are not listed as main entries. Only integration repositories found on GitHub are listed. IBM DOORS Next, ReqView and Cradle have no official repository that I could confirm.
+
+- [valispace/ValispacePythonAPI](https://github.com/valispace/ValispacePythonAPI) ![stars](https://img.shields.io/github/stars/valispace/ValispacePythonAPI?style=flat-square) - Python API for Valispace (requirements and systems engineering).
+- [valispace/ValispaceExcelPlugin](https://github.com/valispace/ValispaceExcelPlugin) ![stars](https://img.shields.io/github/stars/valispace/ValispaceExcelPlugin?style=flat-square) - Valispace Excel plugin.
+- [Kio-pon/innoslate-mcp](https://github.com/Kio-pon/innoslate-mcp) ![stars](https://img.shields.io/github/stars/Kio-pon/innoslate-mcp?style=flat-square) - MCP server that lets an AI assistant read and fill an Innoslate project through your own logged-in browser (unofficial, early stage).
+- [FrancoisMalan/innoslate-xml-parser](https://github.com/FrancoisMalan/innoslate-xml-parser) ![stars](https://img.shields.io/github/stars/FrancoisMalan/innoslate-xml-parser?style=flat-square) - Parses an Innoslate project's exported XML file into custom CSV files (old, 2019).
 
 ## AI for Requirements
 
@@ -104,6 +116,7 @@ Most entries below are young projects with few stars; check maturity before rely
 - [XORwell/jama-cli](https://github.com/XORwell/jama-cli) ![stars](https://img.shields.io/github/stars/XORwell/jama-cli?style=flat-square) - Command-line interface for Jama requirements management with MCP server support for AI assistants.
 - [arthurfantaci/requirements-advisor](https://github.com/arthurfantaci/requirements-advisor) ![stars](https://img.shields.io/github/stars/arthurfantaci/requirements-advisor?style=flat-square) - MCP server providing guidance on requirements management best practices.
 - [aminfara/matrix](https://github.com/aminfara/matrix) ![stars](https://img.shields.io/github/stars/aminfara/matrix?style=flat-square) - Local, project-scoped requirement-management MCP server for multi-agent, multi-session work.
+- [Kio-pon/innoslate-mcp](https://github.com/Kio-pon/innoslate-mcp) ![stars](https://img.shields.io/github/stars/Kio-pon/innoslate-mcp?style=flat-square) - MCP server for Innoslate (see the commercial tools section above).
 
 ### MBSE with LLM agents
 
