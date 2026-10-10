@@ -1,8 +1,8 @@
 # Awesome Requirements Tree
 
-Curated list of open-source tools for managing **hierarchical requirement trees** at the level of a **whole vehicle** or a **whole company IT system**, and for **updating the tree after development is finished** (as-built sync, baselines, traceability).
+English | [日本語](README.ja.md)
 
-全車両・全社ITシステムの最上位要求を階層ツリーで管理し、開発完了後に構造を更新し続けるためのOSSキュレーションリストです。
+Curated list of open-source tools for managing **hierarchical requirement trees** at the level of a **whole vehicle** or a **whole company IT system**, and for **updating the tree after development is finished** (as-built sync, baselines, traceability).
 
 ## Contents
 
@@ -38,7 +38,6 @@ Curated list of open-source tools for managing **hierarchical requirement trees*
 ## Capella x StrictDoc Connection
 
 How to connect a requirement tree (StrictDoc) with a system architecture model (Eclipse Capella).
-Capella x StrictDoc の接続方法。
 
 **Pattern (as shown by the pilots below)**
 
