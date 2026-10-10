@@ -1,8 +1,8 @@
-# Awesome Requirements Tree
+# Awesome Requirements AI
 
 English | [日本語](README.ja.md)
 
-Curated list of open-source tools for managing **hierarchical requirement trees** at the level of a **whole vehicle** or a **whole company IT system**, and for **updating the tree after development is finished** (as-built sync, baselines, traceability).
+Curated list of open-source tools for managing **hierarchical requirement trees** at the level of a **whole vehicle** or a **whole company IT system**, for **updating the tree after development is finished** (as-built sync, baselines, traceability), and for doing this work **with AI** (LLMs, agents, MCP).
 
 ## Contents
 
@@ -12,6 +12,8 @@ Curated list of open-source tools for managing **hierarchical requirement trees*
 - [Capella x StrictDoc Connection](#capella-x-strictdoc-connection)
 - [EA: Whole Company IT](#ea-whole-company-it)
 - [Traceability](#traceability)
+- [AI for Requirements](#ai-for-requirements)
+- [Related Lists](#related-lists)
 - [Suggested Combinations](#suggested-combinations)
 
 ## Requirements as Code (text + Git)
@@ -77,12 +79,60 @@ Capella model read access: py-capellambse (read-only)
 - [itsallcode/openfasttrace](https://github.com/itsallcode/openfasttrace) ![stars](https://img.shields.io/github/stars/itsallcode/openfasttrace?style=flat-square) - Requirement tracing suite.
 - [elisa-tech/BASIL](https://github.com/elisa-tech/BASIL) ![stars](https://img.shields.io/github/stars/elisa-tech/BASIL?style=flat-square) - Software quality management with requirement traceability.
 
+## AI for Requirements
+
+Most entries below are young projects with few stars; check maturity before relying on them. Descriptions are taken from each repository's GitHub description.
+
+### Agent skills and spec-driven development
+
+- [Agile-V/agile_v_skills](https://github.com/Agile-V/agile_v_skills) ![stars](https://img.shields.io/github/stars/Agile-V/agile_v_skills?style=flat-square) - Agent Skills for traceable requirements, independent verification, human approval gates, and auditable AI-assisted engineering (Claude Code, Cursor, VS Code, GitHub Copilot).
+- [sudokar/openspec-plus](https://github.com/sudokar/openspec-plus) ![stars](https://img.shields.io/github/stars/sudokar/openspec-plus?style=flat-square) - Agentic skills that extend OpenSpec spec-driven development: discovery, requirements, design decisions, execution planning.
+- [FredAntB/Spec-Driven-Development](https://github.com/FredAntB/Spec-Driven-Development) ![stars](https://img.shields.io/github/stars/FredAntB/Spec-Driven-Development?style=flat-square) - Claude skill that generates requirements.md, design.md and tasks.md before code, plus config files for several AI coding tools.
+- [agent-ix/quoin](https://github.com/agent-ix/quoin) ![stars](https://img.shields.io/github/stars/agent-ix/quoin?style=flat-square) - Spec-driven development for Claude Code with validated, ISO/IEC/IEEE 29148-aligned specs.
+- [muchengracedriver/awesome-requirements-writer](https://github.com/muchengracedriver/awesome-requirements-writer) ![stars](https://img.shields.io/github/stars/muchengracedriver/awesome-requirements-writer?style=flat-square) - Turns engineering intent into requirements that can be designed, reviewed, verified, and traced; flags missing inputs instead of inventing thresholds.
+- [kj648/requirement-clarifier](https://github.com/kj648/requirement-clarifier) ![stars](https://img.shields.io/github/stars/kj648/requirement-clarifier?style=flat-square) - Requirement-engineering workflow that turns ambiguous requirements into verified, traceable specs for AI coding agents.
+
+### LLM-assisted analysis, traceability, and change impact
+
+- [saima-imran/safe-trace-ai](https://github.com/saima-imran/safe-trace-ai) ![stars](https://img.shields.io/github/stars/saima-imran/safe-trace-ai?style=flat-square) - Research prototype for AI-assisted safety-requirements change-impact analysis, traceability, and verification-evidence review (Ollama, Streamlit).
+- [rioffe/speccheck](https://github.com/rioffe/speccheck) ![stars](https://img.shields.io/github/stars/rioffe/speccheck?style=flat-square) - For every ID a SPEC.md declares, finds where code and tests cite it and reports one evidence-backed status per ID; optional downgrade-only LLM judge.
+- [ahmedsalem84/Req-RAG-LLM](https://github.com/ahmedsalem84/Req-RAG-LLM) ![stars](https://img.shields.io/github/stars/ahmedsalem84/Req-RAG-LLM?style=flat-square) - RAG-enhanced LLMs with knowledge-graph construction and traceability optimization for requirements engineering.
+- [boxdate/ReqPipeline](https://github.com/boxdate/ReqPipeline) ![stars](https://img.shields.io/github/stars/boxdate/ReqPipeline?style=flat-square) - USDM and local-LLM (Ollama) requirements engineering pipeline.
+
+### MCP servers for requirements tools
+
+- [XORwell/jama-cli](https://github.com/XORwell/jama-cli) ![stars](https://img.shields.io/github/stars/XORwell/jama-cli?style=flat-square) - Command-line interface for Jama requirements management with MCP server support for AI assistants.
+- [arthurfantaci/requirements-advisor](https://github.com/arthurfantaci/requirements-advisor) ![stars](https://img.shields.io/github/stars/arthurfantaci/requirements-advisor?style=flat-square) - MCP server providing guidance on requirements management best practices.
+- [aminfara/matrix](https://github.com/aminfara/matrix) ![stars](https://img.shields.io/github/stars/aminfara/matrix?style=flat-square) - Local, project-scoped requirement-management MCP server for multi-agent, multi-session work.
+
+### MBSE with LLM agents
+
+- [cosmindxu/mbse-workflow](https://github.com/cosmindxu/mbse-workflow) ![stars](https://img.shields.io/github/stars/cosmindxu/mbse-workflow?style=flat-square) - LLM-agent workflow that authors layered, SysML-like models and gates every step on Sysprose checks.
+
+### Requirements for AI systems themselves
+
+- [responsibleai/ASSERT](https://github.com/responsibleai/ASSERT) ![stars](https://img.shields.io/github/stars/responsibleai/ASSERT?style=flat-square) - Requirement-driven evaluation harness for AI agents and LLM applications: generates behavior-specific test cases from requirements.
+- [ybeven/4D-ARE](https://github.com/ybeven/4D-ARE) ![stars](https://img.shields.io/github/stars/ybeven/4D-ARE?style=flat-square) - Attribution-driven requirements-engineering framework for LLM agents.
+
+### Suggested AI-assisted update loop (not a tool, a workflow idea)
+
+1. After development, collect what changed (diff, as-built model, test results).
+2. Let an LLM propose changes to the requirement tree and trace links, with change-impact analysis.
+3. A human reviews and approves; the tree stays in Git (`.sdoc` / Doorstop) so every change is a reviewable diff.
+4. Re-export (ReqIF) and re-check traceability.
+
+## Related Lists
+
+- [jgsystemsconsulting/awesome-requirements-engineering](https://github.com/jgsystemsconsulting/awesome-requirements-engineering) - Requirements engineering resources: standards, methods, interchange formats, tools, books, community.
+- [ishandutta2007/Awesome-Engineering-Requirements-Management](https://github.com/ishandutta2007/Awesome-Engineering-Requirements-Management) - Open-source engineering requirements management tools.
+
 ## Suggested Combinations
 
 | Scope | Top-level model | Requirement tree | After development |
 |---|---|---|---|
 | Whole vehicle | Capella or SysML v2 | StrictDoc / Doorstop | Script updates via py-capellambse / SysML v2 API; Capella x StrictDoc via ReqIF (see above) |
 | Whole company IT | waltz / turbo-ea | StrictDoc | Re-sync baselines in Git, trace with OpenFastTrace |
+| Either, with AI | as above | as above | LLM proposes tree changes and impact; human approves in Git (see AI section) |
 
 ## Contributing
 

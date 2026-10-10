@@ -1,8 +1,8 @@
-# Awesome Requirements Tree
+# Awesome Requirements AI
 
 [English](README.md) | 日本語
 
-**全車両**または**全社ITシステム**レベルの最上位要求を**階層ツリー**で管理し、**開発完了後にツリー構造を更新し続ける**（実装後の同期、ベースライン、トレーサビリティ）ためのOSSキュレーションリストです。
+**全車両**または**全社ITシステム**レベルの最上位要求を**階層ツリー**で管理し、**開発完了後にツリー構造を更新し続ける**（実装後の同期、ベースライン、トレーサビリティ）ための、そして**AI（LLM、エージェント、MCP）を使ってそれを行う**ためのOSSキュレーションリストです。
 
 ## 目次
 
@@ -12,6 +12,8 @@
 - [Capella と StrictDoc の連携](#capella-と-strictdoc-の連携)
 - [EA: 全社ITシステム](#ea-全社itシステム)
 - [トレーサビリティ](#トレーサビリティ)
+- [AI × 要求](#ai--要求)
+- [関連リスト](#関連リスト)
 - [おすすめの組み合わせ](#おすすめの組み合わせ)
 
 ## コードとしての要求管理（テキスト + Git）
@@ -77,12 +79,60 @@ Capellaモデルの読み取り: py-capellambse（読み取り専用）
 - [itsallcode/openfasttrace](https://github.com/itsallcode/openfasttrace) ![stars](https://img.shields.io/github/stars/itsallcode/openfasttrace?style=flat-square) - 要求トレーシングスイート。
 - [elisa-tech/BASIL](https://github.com/elisa-tech/BASIL) ![stars](https://img.shields.io/github/stars/elisa-tech/BASIL?style=flat-square) - 要求のトレーサビリティを持つソフトウェア品質管理ツール。
 
+## AI × 要求
+
+以下の多くは新しくstarの少ないプロジェクトです。利用前に成熟度を確認してください。説明は各リポジトリのGitHub上の説明文に基づきます。
+
+### エージェントスキルと仕様駆動開発
+
+- [Agile-V/agile_v_skills](https://github.com/Agile-V/agile_v_skills) ![stars](https://img.shields.io/github/stars/Agile-V/agile_v_skills?style=flat-square) - トレーサブルな要求、独立した検証、人による承認ゲート、監査可能なAI支援エンジニアリングのためのエージェントスキル（Claude Code、Cursor、VS Code、GitHub Copilot対応）。
+- [sudokar/openspec-plus](https://github.com/sudokar/openspec-plus) ![stars](https://img.shields.io/github/stars/sudokar/openspec-plus?style=flat-square) - OpenSpecの仕様駆動開発を拡張するエージェントスキル。探索、要求、設計判断、実行計画を支援。
+- [FredAntB/Spec-Driven-Development](https://github.com/FredAntB/Spec-Driven-Development) ![stars](https://img.shields.io/github/stars/FredAntB/Spec-Driven-Development?style=flat-square) - コードの前に requirements.md、design.md、tasks.md を生成し、複数のAIコーディングツール用の設定ファイルも作るClaudeスキル。
+- [agent-ix/quoin](https://github.com/agent-ix/quoin) ![stars](https://img.shields.io/github/stars/agent-ix/quoin?style=flat-square) - Claude Code向けの仕様駆動開発。検証済みのISO/IEC/IEEE 29148準拠の仕様を作成。
+- [muchengracedriver/awesome-requirements-writer](https://github.com/muchengracedriver/awesome-requirements-writer) ![stars](https://img.shields.io/github/stars/muchengracedriver/awesome-requirements-writer?style=flat-square) - エンジニアリングの意図を、設計・レビュー・検証・追跡できる要求に変換。不足入力は閾値を作り出さずに指摘する。
+- [kj648/requirement-clarifier](https://github.com/kj648/requirement-clarifier) ![stars](https://img.shields.io/github/stars/kj648/requirement-clarifier?style=flat-square) - あいまいな要求を、検証済みでトレース可能な仕様に変えるAIコーディングエージェント向けワークフロー。
+
+### LLMによる分析・トレーサビリティ・変更影響
+
+- [saima-imran/safe-trace-ai](https://github.com/saima-imran/safe-trace-ai) ![stars](https://img.shields.io/github/stars/saima-imran/safe-trace-ai?style=flat-square) - 安全要求の変更影響分析、トレーサビリティ、検証証拠レビューをAIで支援する研究プロトタイプ（Ollama、Streamlit）。
+- [rioffe/speccheck](https://github.com/rioffe/speccheck) ![stars](https://img.shields.io/github/stars/rioffe/speccheck?style=flat-square) - SPEC.md が宣言する各IDについて、コードとテストでの参照箇所を探し、証拠付きで1IDにつき1ステータスを報告。オプションで判定を下げる方向だけのLLM判定。
+- [ahmedsalem84/Req-RAG-LLM](https://github.com/ahmedsalem84/Req-RAG-LLM) ![stars](https://img.shields.io/github/stars/ahmedsalem84/Req-RAG-LLM?style=flat-square) - RAG強化LLMに知識グラフの構築とトレーサビリティ最適化を組み合わせた要求工学。
+- [boxdate/ReqPipeline](https://github.com/boxdate/ReqPipeline) ![stars](https://img.shields.io/github/stars/boxdate/ReqPipeline?style=flat-square) - USDMとローカルLLM（Ollama）による要求工学パイプライン。
+
+### 要求ツール向けMCPサーバー
+
+- [XORwell/jama-cli](https://github.com/XORwell/jama-cli) ![stars](https://img.shields.io/github/stars/XORwell/jama-cli?style=flat-square) - Jama要求管理のCLI。AIアシスタント向けにMCPサーバーにも対応。
+- [arthurfantaci/requirements-advisor](https://github.com/arthurfantaci/requirements-advisor) ![stars](https://img.shields.io/github/stars/arthurfantaci/requirements-advisor?style=flat-square) - 要求管理のベストプラクティスを助言するMCPサーバー。
+- [aminfara/matrix](https://github.com/aminfara/matrix) ![stars](https://img.shields.io/github/stars/aminfara/matrix?style=flat-square) - マルチエージェント・マルチセッション作業向けの、ローカルでプロジェクト単位の要求管理MCPサーバー。
+
+### LLMエージェントによるMBSE
+
+- [cosmindxu/mbse-workflow](https://github.com/cosmindxu/mbse-workflow) ![stars](https://img.shields.io/github/stars/cosmindxu/mbse-workflow?style=flat-square) - 階層化されたSysML風モデルを作成し、各ステップをSysproseのチェックで関門にするLLMエージェントのワークフロー。
+
+### AIシステム自体の要求
+
+- [responsibleai/ASSERT](https://github.com/responsibleai/ASSERT) ![stars](https://img.shields.io/github/stars/responsibleai/ASSERT?style=flat-square) - AIエージェントとLLMアプリ向けの要求駆動の評価ハーネス。要求から振る舞い別のテストケースを生成。
+- [ybeven/4D-ARE](https://github.com/ybeven/4D-ARE) ![stars](https://img.shields.io/github/stars/ybeven/4D-ARE?style=flat-square) - LLMエージェント向けの、帰属（attribution）駆動の要求工学フレームワーク。
+
+### AI支援による更新ループの案（ツールではなくワークフローの提案）
+
+1. 開発後に、変更点（差分、実装後のモデル、テスト結果）を集める。
+2. LLMが要求ツリーとトレースリンクの変更案を、変更影響分析つきで提案する。
+3. 人がレビューして承認する。ツリーはGit管理（`.sdoc` / Doorstop）にして、変更をレビュー可能な差分にする。
+4. ReqIFを再エクスポートし、トレーサビリティを再チェックする。
+
+## 関連リスト
+
+- [jgsystemsconsulting/awesome-requirements-engineering](https://github.com/jgsystemsconsulting/awesome-requirements-engineering) - 要求工学のリソース集（標準、手法、交換フォーマット、ツール、書籍、コミュニティ）。
+- [ishandutta2007/Awesome-Engineering-Requirements-Management](https://github.com/ishandutta2007/Awesome-Engineering-Requirements-Management) - OSSの工学向け要求管理ツール集。
+
 ## おすすめの組み合わせ
 
 | 対象 | 最上位モデル | 要求ツリー | 開発後の更新 |
 |---|---|---|---|
 | 車両全体 | Capella または SysML v2 | StrictDoc / Doorstop | py-capellambse / SysML v2 API でスクリプト更新。Capella と StrictDoc は ReqIF で連携（上記参照） |
 | 全社ITシステム | waltz / turbo-ea | StrictDoc | Gitでベースラインを再同期し、OpenFastTraceで追跡 |
+| どちらもAI併用 | 上記と同じ | 上記と同じ | LLMがツリー変更と影響を提案し、人がGitで承認（AIセクション参照） |
 
 ## コントリビュート
 
